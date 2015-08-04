@@ -1,7 +1,10 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
         xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+    <ui:with field="res" type="com.arcbees.smallmessages.client.resources.Resources"/>
+
     <g:HTMLPanel ui:field="htmlPanel">
-        <g:Label ui:field="messageLabel"/>
+        <g:Label ui:field="messageLabel" styleName="{res.styles.border}"/>
     </g:HTMLPanel>
 
 </ui:UiBinder>
