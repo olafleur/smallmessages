@@ -63,9 +63,14 @@ public class MessageEntryWidget implements IsWidget, KeyUpHandler, ClickHandler 
 
     private void addMessage(String text) {
         verticalPanel.add(new MessageWidget(text));
+        consoleLog("The user has published a new message : " + text);
     }
 
     private boolean isValidMessage() {
         return messageText.getText().length() <= MAX_CHARACTERS && messageText.getText().length() > 0;
     }
+
+    private native void consoleLog(String message) /*-{
+        $wnd.console.log(message);
+    }-*/;
 }
