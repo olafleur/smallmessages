@@ -4,7 +4,10 @@
     <ui:with field="res" type="com.arcbees.smallmessages.client.resources.Resources"/>
 
     <g:HTMLPanel ui:field="htmlPanel">
+        <hr/>
+        <g:Image resource="{res.logo}"/>
         <g:Label ui:field="messageLabel" styleName="{res.styles.border}"/>
+        <hr/>
     </g:HTMLPanel>
 
 </ui:UiBinder>
