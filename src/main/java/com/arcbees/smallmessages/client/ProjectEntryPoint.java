@@ -2,6 +2,7 @@ package com.arcbees.smallmessages.client;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 
 /**
@@ -11,7 +12,12 @@ public class ProjectEntryPoint implements EntryPoint {
   
   @Override
   public void onModuleLoad() {
-    RootPanel.get().add(new HTML("GWT App has loaded."));
+    Label titleLabel = new Label();
+
+    titleLabel.setText("Small messages application");
+
+    RootPanel.get().add(titleLabel);
+    RootPanel.get().add(new MessageEntryWidget());
   }
 
 }
